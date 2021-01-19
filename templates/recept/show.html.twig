@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recept{% endblock %}
+
+{% block body %}
+    <h1>Recept</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ recept.id }}</td>
+            </tr>
+            <tr>
+                <th>Datum</th>
+                <td>{{ recept.datum ? recept.datum|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Periode</th>
+                <td>{{ recept.periode }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('recept_index') }}">back to list</a>
+
+    <a href="{{ path('recept_edit', {'id': recept.id}) }}">edit</a>
+
+    {{ include('recept/_delete_form.html.twig') }}
+{% endblock %}
