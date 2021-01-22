@@ -1,0 +1,9 @@
+.jumbotronBackground {
+    background-image: url("dokter.jpg");
+    background-size: cover;
+}
+
+.nav-link2 {
+    margin-right: revert;
+
+}
