@@ -9,13 +9,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class BezoekerController extends AbstractController
 {
     /**
-     * @Route("/", name="bezoeker")
+     * @Route("/bezoeker", name="bezoeker")
      */
     public function index(): Response
     {
         return $this->render('base.html.twig', [
             'controller_name' => 'BezoekerController',
         ]);
+
 
     }
 }
